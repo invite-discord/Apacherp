@@ -50,8 +50,7 @@ body::before{
 
     border-radius:24px;
 
-    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wgTx2p4wXeG0m_e1mklfrJc-2Nbll2ahyV1KxiVSBw&s=10");
-
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wgTx2p4wXeG0m_e1mklfrJc-2Nbll2ahyV1KxiVSBw&s=10");
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
@@ -74,7 +73,7 @@ body::before{
 
 h1{
     margin-top:10px;
-    font-size:30px;
+    font-size:20px;
 }
 
 
@@ -207,6 +206,278 @@ input:disabled{
     opacity:.6;
 }
 
+/* DISPLAY NAME LABEL */
+
+.name-label{
+
+    display:block;
+
+    text-align:left;
+
+    color:#b5bac1;
+
+    font-size:13px;
+
+    margin-top:10px;
+
+    margin-bottom:3px;
+
+}
+
+/* DATE OF BIRTH TITLE */
+
+.dob-title{
+
+    display:block;
+
+    width:100%;
+
+    text-align:left;
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    margin-top:10px;
+
+    margin-bottom:2px;
+
+}
+
+.dob-container{
+
+    display:flex;
+
+    gap:8px;
+
+    width:100%;
+
+    margin-top:-20px;
+
+    justify-content:flex-start;
+
+}
+
+
+
+.dropdown{
+
+    position:relative;
+
+    flex:1;
+
+}
+
+
+.drop-btn{
+
+    width:100%;
+    height:45px;
+
+    padding:0 12px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#1e1f22;
+
+    color:#b5bac1;
+    font-size:14px;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+
+.arrow{
+
+    width:8px;
+    height:8px;
+
+    border-right:2px solid #b5bac1;
+    border-bottom:2px solid #b5bac1;
+
+    transform:rotate(45deg);
+
+    margin-top:-5px;
+
+}
+
+
+.drop-btn:hover{
+
+    background:#2b2d31;
+
+}
+
+
+
+
+.dropdown-menu{
+
+    display:none;
+
+    position:absolute;
+
+    top:calc(100% + 5px);
+
+    left:0;
+
+    width:100%;
+
+    max-height:160px;
+
+    overflow-y:auto;
+
+    background:#000;
+
+    border-radius:8px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.6);
+
+    z-index:9999;
+
+}
+
+
+/* SCROLLBAR */
+
+.dropdown-menu::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+
+.dropdown-menu::-webkit-scrollbar-track{
+
+    background:#111;
+
+    border-radius:10px;
+
+}
+
+
+.dropdown-menu::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:10px;
+
+}
+
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover{
+
+    background:#555;
+
+}
+
+
+
+.dropdown-menu div{
+
+    padding:12px;
+
+    color:rgb(209, 198, 198);
+    background-color: #232428;
+    text-align:left;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+
+
+.dropdown-menu div:hover{
+
+    background:#232428;
+
+}
+
+
+
+
+
+.dropdown.active .dropdown-menu{
+
+    display:block;
+
+}
+
+/* MOBILE DOB */
+
+@media(max-width:768px){
+
+
+    .dob-container{
+
+        gap:8px;
+
+    }
+
+
+
+    .drop-btn{
+
+        height:43px;
+
+        font-size:13px;
+
+        padding:0 8px;
+
+    }
+
+
+
+    .dropdown-menu div{
+
+        padding:10px;
+
+        font-size:13px;
+
+    }
+
+
+}
+
+/* TERMS CHECKBOX */
+
+.terms{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:18px;
+
+    color:#b5bac1;
+
+    font-size:13px;
+
+    text-align:left;
+
+}
+
+
+
+.terms input{
+
+    width:auto;
+
+    margin:0;
+
+    accent-color:#5865f2;
+
+}
 
 
 /* ERROR MESSAGE */
@@ -300,8 +571,7 @@ input:disabled{
     border-radius:24px;
 
 
-    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wgTx2p4wXeG0m_e1mklfrJc-2Nbll2ahyV1KxiVSBw&s=10");
-
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wgTx2p4wXeG0m_e1mklfrJc-2Nbll2ahyV1KxiVSBw&s=10");
 
     background-position:center;
 
@@ -401,134 +671,299 @@ input:disabled{
 
 
 
-/* MOBILE */
+/* ===================================================
+   MOBILE RESPONSIVE (UPDATED)
+=================================================== */
 
-@media(max-width:768px){
+@media screen and (max-width:768px){
 
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px 15px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
 
-    body{
+ .card{
+    width:100%;
+    max-width:430px;
+    margin:auto;
+    padding:24px 18px;
+    border-radius:16px;
+}
+    /* ICON */
 
-        padding:15px;
-
-        overflow:auto;
-
-    }
-
-
-    .card{
-
-        width:100%;
-
-        max-width:430px;
-
-        padding:25px 20px;
-
-        border-radius:16px;
-
-    }
-
-
-
-    .icon{
-
+    .icon,
+    .loading-icon{
         width:80px;
-
         height:80px;
-
-        margin-bottom:20px;
-
+        border-radius:22px;
+        margin-bottom:18px;
     }
 
-
+    /* INVITE PAGE */
 
     .invite-text{
-
-        font-size:12px;
-
+        font-size:11px;
+        letter-spacing:1px;
     }
-
-
 
     h1{
-
-        font-size:26px;
-
+        font-size:20px;
+        line-height:28px;
+        margin-top:10px;
+        word-break:break-word;
     }
 
+    .description{
+        font-size:14px;
+        line-height:22px;
+    }
 
+    /* LOGIN PAGE */
+
+    #loginPage .icon{
+        width:80px;
+        height:80px;
+        margin-bottom:18px;
+    }
+
+    #loginPage .invite-text{
+        font-size:11px;
+        letter-spacing:1px;
+        margin-bottom:10px;
+    }
+
+    #loginPage h2{
+        font-size:22px;
+        margin:8px 0 12px;
+    }
+
+    #loginPage .description{
+        font-size:14px;
+        line-height:22px;
+        margin-bottom:12px;
+    }
+
+    /* STATS */
 
     .stats{
-
+        display:flex;
         flex-direction:column;
-
+        align-items:center;
         gap:12px;
-
+        margin-top:20px;
     }
-
-
 
     .stat{
-
         justify-content:center;
-
         font-size:14px;
-
     }
 
-
-
-    button{
-
-        padding:13px;
-
-        font-size:15px;
-
-    }
-
-
+    /* INPUTS */
 
     input{
-
-        padding:13px;
-
+        width:100%;
+        padding:14px;
+        margin-top:6px;
         font-size:15px;
-
-        margin-top:4px;
-
     }
 
+    .name-label,
+    .dob-title{
+        font-size:13px;
+        margin-top:14px;
+        margin-bottom:5px;
+    }
 
+    /* DOB */
+
+    .dob-container{
+        display:flex;
+        gap:8px;
+        width:100%;
+        margin-top:0;
+    }
+
+    .dropdown{
+        flex:1;
+    }
+
+    .drop-btn{
+        width:100%;
+        height:46px;
+        padding:0 10px;
+        font-size:13px;
+    }
+
+    .dropdown-menu{
+        max-height:170px;
+    }
+
+    .dropdown-menu div{
+        padding:11px;
+        font-size:13px;
+    }
+
+    /* TERMS */
+
+    .terms{
+        margin-top:18px;
+        font-size:13px;
+        line-height:20px;
+        align-items:flex-start;
+    }
+
+    .terms input{
+        margin-top:3px;
+    }
+
+    /* ERROR */
+
+    .error-message{
+        font-size:12px;
+        margin-top:4px;
+    }
+
+    /* BUTTONS */
+
+    button{
+        width:100%;
+        padding:14px;
+        font-size:15px;
+    }
+
+    .back-btn{
+        margin-top:10px;
+    }
+
+    /* LOADING */
 
     #loading{
-
         border-radius:16px;
-
     }
-
-
-
-    .loading-icon{
-
-        width:80px;
-
-        height:80px;
-
-    }
-
-
 
     .loading-content h3{
-
         font-size:22px;
-
     }
 
-
-
     #loading p{
-
         font-size:14px;
+        text-align:center;
+        line-height:22px;
+    }
 
+    .spinner{
+        width:42px;
+        height:42px;
+    }
+
+}
+
+/* =========================
+   PHONES 430px
+========================= */
+
+@media screen and (max-width:430px){
+
+    body{
+        padding:15px 10px;
+    }
+
+    .card{
+        padding:20px 15px;
+    }
+
+    .icon,
+    .loading-icon{
+        width:74px;
+        height:74px;
+    }
+
+    h1{
+        font-size:18px;
+        line-height:24px;
+    }
+
+    .invite-text{
+        font-size:10px;
+    }
+
+    .stat{
+        font-size:13px;
+    }
+
+    input{
+        font-size:14px;
+        padding:13px;
+    }
+
+    .drop-btn{
+        height:44px;
+        font-size:12px;
+        padding:0 8px;
+    }
+
+    .dropdown-menu div{
+        font-size:12px;
+    }
+
+    button{
+        padding:13px;
+        font-size:14px;
+    }
+
+}
+
+/* =========================
+   PHONES 360px
+========================= */
+
+@media screen and (max-width:360px){
+
+    body{
+        padding:12px 8px;
+    }
+
+    .card{
+        padding:16px 12px;
+    }
+
+    .icon,
+    .loading-icon{
+        width:68px;
+        height:68px;
+    }
+
+    h1{
+        font-size:16px;
+        line-height:22px;
+    }
+
+    .invite-text{
+        font-size:9px;
+    }
+
+    .dob-container{
+        gap:6px;
+    }
+
+    .drop-btn{
+        height:42px;
+        font-size:11px;
+        padding:0 6px;
+    }
+
+    input{
+        font-size:13px;
+    }
+
+    button{
+        font-size:13px;
+        padding:12px;
     }
 
 }
