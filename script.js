@@ -115,6 +115,87 @@ loginBtn.addEventListener("click", () => {
 
 });
 
+// CLEAR EMAIL ERROR
 usernameInput.addEventListener("input", () => {
     usernameError.textContent = "";
+});
+
+
+// =========================
+// CUSTOM DROPDOWNS
+// =========================
+
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(dropdown => {
+
+    const button = dropdown.querySelector(".drop-btn");
+    const items = dropdown.querySelectorAll(".dropdown-menu div");
+
+    // OPEN / CLOSE
+    button.addEventListener("click", function (e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Close all other dropdowns
+        dropdowns.forEach(other => {
+            if (other !== dropdown) {
+                other.classList.remove("active");
+            }
+        });
+
+        // Toggle current dropdown
+        dropdown.classList.toggle("active");
+
+    });
+
+    // SELECT OPTION
+    items.forEach(item => {
+
+        item.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+            button.innerHTML = `
+                <span>${this.textContent}</span>
+                <span class="arrow"></span>
+            `;
+
+            dropdown.classList.remove("active");
+
+        });
+
+    });
+
+});
+
+
+// =========================
+// CLICK OUTSIDE = CLOSE
+// =========================
+
+document.addEventListener("click", function () {
+
+    dropdowns.forEach(dropdown => {
+        dropdown.classList.remove("active");
+    });
+
+});
+
+
+// =========================
+// ESC KEY = CLOSE
+// =========================
+
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Escape") {
+
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove("active");
+        });
+
+    }
+
 });
