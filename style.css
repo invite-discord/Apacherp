@@ -50,7 +50,8 @@ body::before{
 
     border-radius:24px;
 
-background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wgTx2p4wXeG0m_e1mklfrJc-2Nbll2ahyV1KxiVSBw&s=10");
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVWSRoj4snKIHhhl9I8jkkaR5_aC0a7Ib-hlbhvpow-g&s=10");
+
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
@@ -290,6 +291,12 @@ input:disabled{
     align-items:center;
     justify-content:space-between;
 
+    outline:none;
+    box-shadow:none;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-appearance:none;
+    appearance:none;
+
 }
 
 
@@ -314,7 +321,15 @@ input:disabled{
 
 }
 
+.drop-btn:focus,
+.drop-btn:focus-visible,
+.drop-btn:active{
 
+    background:#1e1f22;
+    outline:none;
+    box-shadow:none;
+
+}
 
 
 .dropdown-menu{
@@ -571,7 +586,8 @@ input:disabled{
     border-radius:24px;
 
 
-background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wgTx2p4wXeG0m_e1mklfrJc-2Nbll2ahyV1KxiVSBw&s=10");
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVWSRoj4snKIHhhl9I8jkkaR5_aC0a7Ib-hlbhvpow-g&s=10");
+
 
     background-position:center;
 
